@@ -1,4 +1,5 @@
 {
   "domain": "dev-86v6mn8qp66d54pa.us.auth0.com",
-  "clientId": "nN9TFF1C64bwWVzkQxXXBZZYcOYR8rxV"
+  "clientId": "nN9TFF1C64bwWVzkQxXXBZZYcOYR8rxV",
+  "audience": "we-r-vr"
 }
