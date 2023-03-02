@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useContext } from 'react';
 import { createAuth0Client } from '@auth0/auth0-spa-js';
+
 const DEFAULT_REDIRECT_CALLBACK = () =>
   window.history.replaceState({}, document.title, window.location.pathname);
 export const Auth0Context = React.createContext();
@@ -36,6 +37,7 @@ export const Auth0Provider = ({
     initAuth0();
     // eslint-disable-next-line
   }, []);
+
   const loginWithPopup = async (params = {}) => {
     setPopupOpen(true);
     try {
@@ -57,6 +59,7 @@ export const Auth0Provider = ({
     setIsAuthenticated(true);
     setUser(user);
   };
+
   return (
     <Auth0Context.Provider
       value={{
