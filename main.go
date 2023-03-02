@@ -26,9 +26,9 @@ func main() {
   r := mux.NewRouter()
 
   r.Handle("/", http.FileServer(http.Dir("./views/")))
-  r.Handle("/status", NotImplemented).Methods("GET")
-  r.Handle("/products", NotImplemented).Methods("GET")
-  r.Handle("/products/{slug}/feedback", NotImplemented).Methods("POST")
+  r.Handle("/status", StatusHandler).Methods("GET")
+  r.Handle("/products", ProductsHandler).Methods("GET")
+  r.Handle("/products/{slug}/feedback", AddFeedbackHandler).Methods("POST")
 
   r.PathPrefix("/static/").Handler(http.StripPrefix("/static/", http.FileServer(http.Dir("./static/"))))
 
